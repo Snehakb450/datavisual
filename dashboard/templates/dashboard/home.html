@@ -1,0 +1,93 @@
+{% extends "dashboard/master.html" %}
+{% load static %}
+{% block content %}
+
+
+<center>
+    <div class="row" style="margin-left: 5%;width: 100%;height: 50px;">
+
+
+        <div class="card col-4">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique Intensity Count</h5>
+                <p class="card-text">{{ unique_intensity_count }}</p>
+
+            </div>
+        </div>
+
+
+        <div class="card col-4">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique relevance Count</h5>
+                <p class="card-text">{{ unique_relevance_count }}</p>
+
+            </div>
+        </div>
+
+
+        <div class="card col-4">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique likelihood Count</h5>
+                <p class="card-text">{{ unique_likelihood_count }}</p>
+
+            </div>
+        </div>
+
+<br>
+        
+    </div>
+    <br><br><br>
+    <div class="row" style="margin-left: 5%;width: 100%;height: 50px;">
+
+        <div class="card col-3">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique country Count</h5>
+                <p class="card-text">{{ unique_country_count }}</p>
+
+            </div>
+        </div>
+
+
+        <div class="card col-3">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique topics Count</h5>
+                <p class="card-text">{{ unique_topics_count }}</p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="card col-3">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique region Count</h5>
+                <p class="card-text">{{ unique_region_count }}</p>
+
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <div class="card-body " style="background-color: #f9f7f7;">
+                <h5 class="card-title">Unique sector Count</h5>
+                <p class="card-text">{{ unique_sector_count }}</p>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <br>
+</center>
+<br><br>
+<h2> Pair plot between the variables</h2>
+<div>
+    {{ plot_div|safe }}
+</div>
+
+<div id="plotly-plot"></div>
+
+
+{% endblock %}
+

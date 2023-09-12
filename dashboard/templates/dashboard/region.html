@@ -1,0 +1,16 @@
+{% extends "dashboard/master.html" %}
+
+{% block content %}
+
+<h2>Region</h2>
+<div id="bar-plot-container">
+    {{ plot_div|safe }}
+</div>
+<br><div>
+    {% for plot_div in plot_divs %}
+        <div class="plot-container">
+            {{ plot_div|safe }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
